@@ -26,7 +26,7 @@ def retriever(pc, bm25):
         retrievers=[kiwi_bm25, pcretriever],  # 사용할 검색 모델의 리스트
         weights=[0.3, 0.7],  # 각 검색 모델의 결과에 적용할 가중치
         search_type="mmr",  # 검색 결과의 다양성을 증진시키는 MMR 방식을 사용
-    ) 
+    )
         # Pinecone vector store 초기화  
     # vectorstore = PineconeVectorStore(  
     # index_name=os.getenv("INDEX_NAME"), embedding=embedding_model

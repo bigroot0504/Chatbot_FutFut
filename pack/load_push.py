@@ -52,12 +52,12 @@ def all_files(path):
             loader = PyMuPDFLoader(file)
             document = loader.load()
             a = True
-        # ------------------- 파일 타입 추가 사항 있을 시 위에 추가 ----------------#
+        # -----ㄴ------------- 파일 타입 추가 사항 있을 시 위에 추가 ----------------#
         if a:
             print(file.split('/')[-1] + ' split 진행 중')
             text_splitter = CharacterTextSplitter.from_tiktoken_encoder(
                 separator=".",
-                chunk_size=500,
+                chunk_size=500, 
                 chunk_overlap=0,
             )
             splits = text_splitter.split_documents(document)
